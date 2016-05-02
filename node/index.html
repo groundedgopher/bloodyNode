@@ -29,6 +29,7 @@ and open the template in the editor.
       var socket = io();
       socket.on('connection', function(socket){
           socket.emit('new connect', 'someone new joined');
+          console.log('hello');
       });
       $('form').submit(function(){
           socket.emit('chat message', $('#m').val());
